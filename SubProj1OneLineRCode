@@ -1,0 +1,13 @@
+# One only 1 line code extracts any user Donald Trump latest 10 tweets easy simple learning in seconds
+Youtube published on Nov 19, 2016 at URL Youtube Address:
+https://youtu.be/1gdbKuYmpQw
+To try the code: Have R installed [require("rvest")]. Here is the total code line, # starting a comment and library("rvest") is like "include" in C
+------R Code Starts after this line-------
+library("rvest")
+gsub("[\r\n]", "", html_text(html_nodes((read_html("https://twitter.com/realDonaldTrump")), css = ".js-tweet-text-container"))[1:10])
+------R Code Ends before this line-------
+# Below is another version, less flexible, You may change the twitter user and the "1:10" to "1:####" to get the last #### tweets.
+html_text(html_nodes((read_html("https://twitter.com/realDonaldTrump")), css = ".js-tweet-text-container"),trim=TRUE)[1:10]
+
+AnyUV
+Mar 31, 2019
