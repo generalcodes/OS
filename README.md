@@ -18,7 +18,7 @@ Enough said, the current systems are lousy and sloppy. AntUV is working effortle
 
 That is the background for this project and the introduction for this preface.
 
-Nest, a small enumeration on some of the smart code projects.
+Next, a small enumeration on some of the smart code projects.
 
 AntUV
 Mar 32, 2019
