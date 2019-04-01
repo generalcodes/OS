@@ -20,5 +20,9 @@ That is the background for this project and the introduction for this preface.
 
 Next, a small enumeration on some of the smart code projects.
 
+The "Subjects Overview" at:
+https://github.com/generalcodes/OS/blob/master/Subjects%20Overview
+is a good place for you to get in-depth information for each system.
+
 AntUV
 Mar 31, 2019
