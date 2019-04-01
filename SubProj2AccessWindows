@@ -1,0 +1,67 @@
+# Ultimate Solution: Way to Access Windows File Directory Folder for move erase delete remove clear
+
+This ia a blogger published Mar 1, 2019 at:
+https://windowslinuxandroidios.blogspot.com/2019/03/Windows-solution-get-full-file-folder-directory-access-privilege-read-write-delete-move-copy-change-for-access-denied-permission-on-protected-system.html
+and additionally:
+https://windowslinuxandroidios.blogspot.com/2019/03/ultimate-solution-way-to-access-windows.html
+
+You see or experience "Access Denied" when try to open read save change copy delete rename move or even access directory file folder in Windows 10 8.1 8 7 XP. You do not have permissions to read the contents of directory. Textbook normally give you procedural steps and dumb for the smart head to follow. Here is an easy approach for any user who knows cmd DOS box command line. Without further ado the commands or in scripts can be used or copy directly to serve for your purpose.
+
+(1) Permission issues to access system protected folders: urge a peek, view, change, copy, erase, del?
+
+System Volume Information
+C:\Program Files\WindowsApps
+C:\Recovery\Windowsre
+
+and more
+
+(2) Cannot Delete Files, directories, hardlink, symbolic files directories:
+
+Winre.WIM
+BOOT.SDI
+BCD
+BOOT
+BOOT.INI
+ntldr
+ntdetect.com
+msdos.sys
+io.sys
+Bootmgr
+Winload.exe
+Shell32.dll
+System32
+SysWOW64
+WinSxS
+etc
+
+If you know what you are doing and have used command line CMD before, you can use the following concise command to help get the job done. i.e. "C:\C:\System Volume Information"
+huge many GB/gig bytes space can be freed from this. In rare case you do not know how to get to execute this command: right click Windows logo in the lower left corner, click "Command Prompt (Admin) *"
+
+takeown /f "C:\System Volume Information" /r /d Y
+
+/f: Specifies the filename or directory folder name pattern. Wildcard "*" can be used.
+/r: Recurse: instructs tool to operate on files in specified directory and all subdirectories.
+/d Y: Default answer yes "Y" / no "N". This occurs for recursive (/R) sub-directories.
+
+rd /s /q "C:\System Volume Information"
+
+/s: Removes whole structure of all files and directories in the indicated folder.
+/q: Quiet mode to answer yes for all confirmation
+
+Happy Annihilating !
+
+Windows solution get full file folder directory access privilege read write delete move copy change for access denied permission on protected system
+Windows-solution-get-full-file-folder-directory-access-privilege-read-write-delete-move-copy-change-for-access-denied-permission-on-protected-system
+
+*How to access "Command Prompt (Admin)", which Windows 10 initially hidden: Goto 1) "All Setting" 2) "Personalization" 3) "Taskbar" 4) Turn off "Replace Command Prompt with Windows PowerShell in the menu when I right-click the start button or press Windows Key+X". Do not know how to access "All setting"? Ask Mom.
+
+However, sometimes, this is not enough to totally clear the files/folders. In this essay, Ant is going to introduce a second utility command in windows, to suffice the del/delete/deletion conditions.
+
+The command needed is: "icacls", still taking the example of "system volume information" folder:
+
+icacls "system volume information" /reset /t
+
+/reset Replaces Access Control List with default inherited ACLs for matching files.
+/T Total: perform on all matching files/directories below specified one.
+
+After this, there is no problem to operate on the identities, files, directories, folders, modify, move, deletion, change etc.
