@@ -8,7 +8,7 @@ In many occasions we want a simple operation system to run for one reason or ano
 And many more.
 Here, are a few puzzles answered:
 (1)	The smallest Windows GUI OS with modern disk storage support: SSD, USB, NTFS, etc.
-(2)	The portable Windows fully functional OS with .Net, msi, install/uninstall, confinable.
+(2)	The portable Windows fully functional OS with .Net, msi, install/uninstall, configurable.
 (3)	LAN is not an issue now, preferably with portable WiFi support.
 Through some efforts, I’ve provided these works and hope to help enthusiasts for their works.
 
